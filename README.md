@@ -4,7 +4,7 @@ Configurations and scripts that I created or adapted for use in my Linux systems
 The directory structure of this repository does not specify the absolute paths of the files. Since the configuration process may very wildly between different distros any caveats are noted in the comments or elsewhere. Shared files between systems will go in the root directory of this repository.
 
 ### Systems
-Type: Desktop
+> Type: Desktop
 OS: Mint 17.3 Rosa
 CPU: Intel Core i5-4690K @ 3.5GHz
 Motherboard: MSI Z97 Gaming 5
@@ -14,7 +14,7 @@ Video Card: Sapphire Radeon R9 290 DX12
 Case: Corsair 760T Full-Tower
 Power Supply: EVGA SuperNOVA 850W G2
 
-Type: Laptop (Lenovo X20)
+> Type: Laptop (Lenovo X20)
 OS: Peppermint 7
 CPU: Intel Core2 Duo CPU P8600 @ 2.4GHz
 Motherboard: N/A
