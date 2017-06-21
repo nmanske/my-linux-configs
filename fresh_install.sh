@@ -22,7 +22,7 @@ DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
 install_packages $DEPENDENCIES
 
 echo -e "Installing Essential packages...\n"
-ESSENTIAL='chromium-browser terminator vim xcape nodejs audacity'
+ESSENTIAL='chromium-browser terminator vim tree xcape audacity'
 install_packages $ESSENTIAL
 
 PROGRAMMING='nodejs npm python-pip python3-pip'
@@ -37,7 +37,7 @@ DISPLAY='redshift redshift-gtk compton'
 install_packages $DISPLAY
 
 echo -e "Installing Battery packages...\n"
-BATTERY='tlp tlp-rdw'
+BATTERY='tlp tlp-rdw powertop'
 install_packages $BATTERY
 
 echo -e "Installing STEM packages...\n"
