@@ -1,18 +1,21 @@
 #!/bin/bash
 # Install useful packages on Debian-based systems without thinking too hard
 
+setopt shwordsplit
+
 echo -e "Updating...\n"
 sudo apt-get update
 
 echo -e "Adding required PPAs...\n"
 sudo add-apt-repository ppa:linrunner/tlp
 
-install_packages () {
-	for i in $1; do
-        msg=' * '
-        msg+=$i
-        echo $msg
-		sudo apt-get install -y $i
+install_packages () { 
+	for i in "$@"; do
+                echo $i
+                msg=' * '
+                msg+=$i
+                echo $msg
+	        sudo apt-get install -y $i
 	done
 	echo ''
 }
@@ -22,7 +25,7 @@ DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
 install_packages $DEPENDENCIES
 
 echo -e "Installing Essential packages...\n"
-ESSENTIAL='chromium-browser terminator vim tree xcape audacity'
+ESSENTIAL='chromium-browser terminator vim tree xcape'
 install_packages $ESSENTIAL
 
 PROGRAMMING='nodejs npm python-pip python3-pip'
@@ -49,14 +52,14 @@ FUN='cowsay fortune cmatrix sl'
 install_packages $FUN
 
 echo -e "Don't forget to install...\n"
-echo 'Packages: atom libreoffice gimp pia vimrc hack-font'
+echo 'Packages: atom libreoffice gimp pia'
 echo 'Chrome Plugins: uBlock ghostery toggle-tabs surfingkeys toolkit-for-ynab'
 
 echo -e "Upgrading...\n"
-sudo apt-get install -y upgrade
+sudo apt-get -y upgrade
 
 echo -e "Upgrading distro...\n"
-sudo apt-get install -y dist-upgrade
+#sudo apt-get -y dist-upgrade
 
 echo 'Fresh install completed. You may need to restart now.'
 
