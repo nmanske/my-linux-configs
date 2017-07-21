@@ -1,17 +1,40 @@
 #!/bin/bash
 # Install useful packages on Debian-based systems without thinking too hard
 
-setopt shwordsplit
+
+PPAS='linrunner/tlp'
+
+DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
+ESSENTIAL='chromium-browser terminator vim tree xcape'
+PROGRAMMING='nodejs npm python-pip python3-pip'
+SYS_INFO='htop screenfetch conky-all'
+DISPLAY='redshift redshift-gtk compton'
+BATTERY='tlp tlp-rdw powertop'
+STEM='speedcrunch'
+FUN='cowsay fortune cmatrix sl'
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+
 echo -e "\n${RED}Updating...\n${NC}"
 sudo apt-get update
 
+add_ppas () {
+    for i in "$@"; do
+        if ! [[ $(which ${i}) ]]; then
+            msg="\n${GREEN}* ppa:"
+		    msg+=$i
+		    msg+="${NC}"
+            echo -e $msg
+            sudo add-apt-repository -y ppa:${i}
+        fi
+	done
+}
+
 echo -e "\n${RED}Adding required PPAs...\n${NC}"
-sudo add-apt-repository ppa:linrunner/tlp
+add_ppas $PPAS
 
 install_packages () { 
 	for i in "$@"; do
@@ -25,35 +48,27 @@ install_packages () {
 }
 
 echo -e "\n${RED}Installing Dependencies...${NC}"
-DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
 install_packages $DEPENDENCIES
 
 echo -e "${RED}Installing Essential packages...${NC}"
-ESSENTIAL='chromium-browser terminator vim tree xcape'
 install_packages $ESSENTIAL
 
 echo -e "${RED}Installing Programming packages...${NC}"
-PROGRAMMING='nodejs npm python-pip python3-pip'
 install_packages $PROGRAMMING
 
 echo -e "${RED}Installing System Info packages...${NC}"
-SYS_INFO='htop screenfetch conky-all'
 install_packages $SYS_INFO
 
 echo -e "${RED}Installing Display packages...${NC}"
-DISPLAY='redshift redshift-gtk compton'
 install_packages $DISPLAY
 
 echo -e "${RED}Installing Battery packages...${NC}"
-BATTERY='tlp tlp-rdw powertop'
 install_packages $BATTERY
 
 echo -e "${RED}Installing STEM packages...${NC}"
-STEM='speedcrunch'
 install_packages $STEM
 
 echo -e "${RED}Installing Fun packages...${NC}"
-FUN='cowsay fortune cmatrix sl'
 install_packages $FUN
 
 echo -e "${RED}Don't forget to install...\n${NC}"
