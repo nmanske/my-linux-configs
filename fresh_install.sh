@@ -4,14 +4,23 @@
 
 PPAS='linrunner/tlp'
 
+# Install using a Debian-based package manager
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
-ESSENTIAL='chromium-browser terminator vim tree xcape'
-PROGRAMMING='nodejs npm python-pip python3-pip'
+ESSENTIAL='chromium-browser terminator vim tree xcape pass curl'
+PROGRAMMING='nodejs npm python-pip python3-pip clang'
 SYS_INFO='htop screenfetch conky-all'
 DISPLAY='redshift redshift-gtk compton'
 BATTERY='tlp tlp-rdw powertop'
 STEM='speedcrunch'
 FUN='cowsay fortune cmatrix sl'
+
+# Install using pip (Python Package Index)
+PIP_PACKAGES='platformio'
+
+# Install using another method (check the website)
+OTHER_PACKAGES='Other Packages: atom libreoffice gimp pia bash-snippets tldr'
+ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
+CHROME_PLUGINS='Chrome Plugins: uBlock ghostery toggle-tabs surfingkeys toolkit-for-ynab'
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -71,9 +80,13 @@ install_packages $STEM
 echo -e "${RED}Installing Fun packages...${NC}"
 install_packages $FUN
 
+echo -e "${RED}Installing pip packages...${NC}"
+sudo pip install -U platformio
+
 echo -e "${RED}Don't forget to install...\n${NC}"
-echo -e "${GREEN}Packages: atom libreoffice gimp pia bash-snippets${NC}"
-echo -e "${GREEN}Chrome Plugins: uBlock ghostery toggle-tabs surfingkeys toolkit-for-ynab${NC}"
+echo -e "${GREEN}${OTHER_PACKAGES}${NC}"
+echo -e "${GREEN}${ATOM_PACKAGES}${NC}"
+echo -e "${GREEN}${CHROME_PLUGINS}${NC}"
 
 echo -e "\n${RED}Upgrading...\n${NC}"
 sudo apt-get -y upgrade
