@@ -2,14 +2,14 @@
 # Install useful packages on Debian-based systems without thinking too hard
 
 
-PPAS='linrunner/tlp'
+PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
 
 # Install using a Debian-based package manager
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
-ESSENTIAL='chromium-browser terminator vim tree xcape pass curl'
-PROGRAMMING='nodejs npm python-pip python3-pip clang'
+ESSENTIAL='chromium-browser terminator vim tree xcape pass curl pinta'
+PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
 SYS_INFO='htop screenfetch conky-all'
-DISPLAY='redshift redshift-gtk compton'
+DISPLAY='redshift redshift-gtk compton shutter'
 BATTERY='tlp tlp-rdw powertop'
 STEM='speedcrunch'
 FUN='cowsay fortune cmatrix sl'
@@ -27,9 +27,6 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 
-echo -e "\n${RED}Updating...\n${NC}"
-sudo apt-get update
-
 add_ppas () {
     for i in "$@"; do
         if ! [[ $(which ${i}) ]]; then
@@ -45,7 +42,10 @@ add_ppas () {
 echo -e "\n${RED}Adding required PPAs...\n${NC}"
 add_ppas $PPAS
 
-install_packages () { 
+echo -e "\n${RED}Updating...\n${NC}"
+sudo apt-get update
+
+install_packages () {
 	for i in "$@"; do
         msg="\n${GREEN}* "
 		msg+=$i
@@ -95,4 +95,3 @@ echo -e "\n${RED}Upgrading distro...\n${NC}"
 sudo apt-get -y dist-upgrade
 
 echo -e "\n${RED}Fresh install completed. You may need to restart now.${NC}"
-
