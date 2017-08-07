@@ -91,7 +91,4 @@ echo -e "${GREEN}${CHROME_PLUGINS}${NC}"
 echo -e "\n${RED}Upgrading...\n${NC}"
 sudo apt-get -y upgrade
 
-echo -e "\n${RED}Upgrading distro...\n${NC}"
-sudo apt-get -y dist-upgrade
-
 echo -e "\n${RED}Fresh install completed. You may need to restart now.${NC}"
