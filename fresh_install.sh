@@ -6,19 +6,19 @@ PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
 
 # Install using a Debian-based package manager
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
-ESSENTIAL='chromium-browser terminator vim tree xcape pass curl pinta'
+ESSENTIAL='chromium-browser steam terminator vim tree xcape pass curl pinta'
 PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
 SYS_INFO='htop screenfetch conky-all'
 DISPLAY='redshift redshift-gtk compton shutter'
-BATTERY='tlp tlp-rdw powertop'
+#BATTERY='tlp tlp-rdw powertop'
 STEM='speedcrunch'
 FUN='cowsay fortune cmatrix sl'
 
 # Install using pip (Python Package Index)
-PIP_PACKAGES='platformio'
+#PIP_PACKAGES='platformio'
 
 # Install using another method (check the website)
-OTHER_PACKAGES='Other Packages: atom libreoffice gimp pia bash-snippets tldr'
+OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
 CHROME_PLUGINS='Chrome Plugins: uBlock ghostery toggle-tabs surfingkeys toolkit-for-ynab'
 
