@@ -20,7 +20,7 @@ FUN='cowsay fortune cmatrix sl'
 # Install using another method (check the website)
 OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
-CHROME_PLUGINS='Chrome Plugins: uBlock ghostery toggle-tabs surfingkeys toolkit-for-ynab'
+FIREFOX_PLUGINS='Firefox Plugins: uBlock uMatrix tab-toggle toolkit-for-ynab'
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -87,7 +87,7 @@ sudo pip install -U platformio
 echo -e "${RED}Don't forget to install...\n${NC}"
 echo -e "${GREEN}${OTHER_PACKAGES}${NC}"
 echo -e "${GREEN}${ATOM_PACKAGES}${NC}"
-echo -e "${GREEN}${CHROME_PLUGINS}${NC}"
+echo -e "${GREEN}${FIREFOX_PLUGINS}${NC}"
 
 echo -e "\n${RED}Upgrading...\n${NC}"
 sudo apt-get -y upgrade
