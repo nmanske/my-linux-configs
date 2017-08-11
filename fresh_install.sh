@@ -5,10 +5,10 @@
 PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
 
 # Install using a Debian-based package manager
-DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
+DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev libdvd-pkg browser-plugin-freshplayer-pepperflash'
 ESSENTIAL='chromium-browser steam terminator vim tree xcape pass curl pinta'
 PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
-SYS_INFO='htop screenfetch conky-all'
+SYS_INFO='htop screenfetch nethogs conky-all'
 DISPLAY='redshift redshift-gtk compton shutter'
 #BATTERY='tlp tlp-rdw powertop'
 STEM='speedcrunch'
@@ -58,6 +58,7 @@ install_packages () {
 
 echo -e "\n${RED}Installing Dependencies...${NC}"
 install_packages $DEPENDENCIES
+sudo dpkg-reconfigure libdvd-pkg
 
 echo -e "${RED}Installing Essential packages...${NC}"
 install_packages $ESSENTIAL
