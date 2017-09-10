@@ -5,12 +5,22 @@
 PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
 
 # Install using a Debian-based package manager
+<<<<<<< HEAD
+DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
+ESSENTIAL='chromium-browser terminator vim tree xcape pass curl'
+PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
+SYS_INFO='htop screenfetch conky-all'
+DISPLAY='redshift redshift-gtk compton xscreensaver'
+IMAGE='pinta inkspace shutter'
+BATTERY='tlp tlp-rdw powertop'
+=======
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev libdvd-pkg browser-plugin-freshplayer-pepperflash'
 ESSENTIAL='chromium-browser steam terminator vim tree xcape pass curl pinta'
 PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
 SYS_INFO='htop screenfetch nethogs conky-all'
 DISPLAY='redshift redshift-gtk compton shutter'
 #BATTERY='tlp tlp-rdw powertop'
+>>>>>>> 34afd7f7f3729fdb85e18c3a00fcefe2192f1fda
 STEM='speedcrunch'
 FUN='cowsay fortune cmatrix sl'
 
@@ -71,6 +81,9 @@ install_packages $SYS_INFO
 
 echo -e "${RED}Installing Display packages...${NC}"
 install_packages $DISPLAY
+
+echo -e "${RED}Installing Image packages...${NC}"
+install_packages $IMAGE
 
 echo -e "${RED}Installing Battery packages...${NC}"
 install_packages $BATTERY
