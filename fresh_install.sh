@@ -21,6 +21,7 @@ FUN='cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate ri
 # Install using another method (check the website)
 OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
+VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme'
 FIREFOX_PLUGINS='Firefox Plugins: uBlock uMatrix tab-toggle toolkit-for-ynab'
 
 RED='\033[0;31m'
@@ -91,6 +92,7 @@ sudo pip install -U platformio
 echo -e "${RED}Don't forget to install...\n${NC}"
 echo -e "${GREEN}${OTHER_PACKAGES}${NC}"
 echo -e "${GREEN}${ATOM_PACKAGES}${NC}"
+echo -e "${GREEN}${VSCODE_PACKAGES}${NC}"
 echo -e "${GREEN}${FIREFOX_PLUGINS}${NC}"
 
 echo -e "\n${RED}Upgrading...\n${NC}"
