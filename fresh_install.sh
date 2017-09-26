@@ -5,30 +5,21 @@
 PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
 
 # Install using a Debian-based package manager
-<<<<<<< HEAD
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
-ESSENTIAL='chromium-browser terminator vim tree xcape pass curl'
+ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger'
 PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
 SYS_INFO='htop screenfetch conky-all'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
 IMAGE='pinta inkspace shutter'
 BATTERY='tlp tlp-rdw powertop'
-=======
-DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev libdvd-pkg browser-plugin-freshplayer-pepperflash'
-ESSENTIAL='chromium-browser steam terminator vim tree xcape pass curl pinta'
-PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
-SYS_INFO='htop screenfetch nethogs conky-all'
-DISPLAY='redshift redshift-gtk compton shutter'
-#BATTERY='tlp tlp-rdw powertop'
->>>>>>> 34afd7f7f3729fdb85e18c3a00fcefe2192f1fda
-STEM='speedcrunch'
-FUN='cowsay fortune cmatrix sl'
+STEM='speedcrunch pi'
+FUN='cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate rig xcowsay'
 
 # Install using pip (Python Package Index)
 #PIP_PACKAGES='platformio'
 
 # Install using another method (check the website)
-OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr'
+OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
 FIREFOX_PLUGINS='Firefox Plugins: uBlock uMatrix tab-toggle toolkit-for-ynab'
 
