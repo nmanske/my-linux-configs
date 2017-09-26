@@ -6,9 +6,9 @@ PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
 
 # Install using a Debian-based package manager
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
-ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger'
+ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger autojump'
 PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
-SYS_INFO='htop screenfetch conky-all'
+SYS_INFO='htop screenfetch conky-all pv ncdu vnstat'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
 IMAGE='pinta inkspace shutter'
 BATTERY='tlp tlp-rdw powertop'
@@ -16,7 +16,7 @@ STEM='speedcrunch pi'
 FUN='cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate rig xcowsay'
 
 # Install using pip (Python Package Index)
-#PIP_PACKAGES='platformio'
+#PIP_PACKAGES=''
 
 # Install using another method (check the website)
 OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat'
