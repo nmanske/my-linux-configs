@@ -22,7 +22,7 @@ FUN='cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate ri
 OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
 VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme'
-FIREFOX_PLUGINS='Firefox Plugins: uBlock uMatrix tab-toggle toolkit-for-ynab'
+FIREFOX_PLUGINS='Firefox Plugins: uBlock decentraleyes privacy-settings self-destructing-cookies noscript canvas-blocker tab-toggle toolkit-for-ynab multiple-tab-handler pocket'
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
