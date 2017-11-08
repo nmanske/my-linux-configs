@@ -29,7 +29,7 @@ alias j='jobs -l'
 
 alias df='df -h'
 alias du='du -h'
-alias free='free -Th'
+alias free='free -h'
 
 alias suspend='pm-suspend'
 alias hibernate='pm-hibernate'
@@ -38,6 +38,14 @@ alias shutdown='shutdown -h now'
 alias open ='gnome-open'
 
 alias oops='sudo $(history -p \!\!)'
+
+alias l='git log --oneline --graph'
+alias d='git diff'
+alias s='git status -s'
+alias a='git add'
+alias cm='git commit -m'
+alias ci='git commit --interactive'
+alias pom='git push origin master'
 
 export HISTCONTROL=ignoreboth:erasedups
 
