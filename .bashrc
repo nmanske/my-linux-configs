@@ -39,6 +39,7 @@ alias open ='gnome-open'
 
 alias oops='sudo $(history -p \!\!)'
 
+alias cl='git clone'
 alias l='git log --oneline --graph'
 alias d='git diff'
 alias s='git status -s'

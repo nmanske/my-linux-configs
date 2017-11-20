@@ -6,7 +6,7 @@ PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
 
 # Install using a Debian-based package manager
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
-ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger autojump'
+ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump'
 PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
 SYS_INFO='htop screenfetch conky-all pv ncdu vnstat'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
