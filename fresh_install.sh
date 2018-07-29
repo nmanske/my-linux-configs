@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Install useful packages on Debian-based systems without thinking too hard
 
 
@@ -8,6 +8,7 @@ PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
 ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux'
 PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
+SHELL='zsh fonts-powerline'
 SYS_INFO='htop screenfetch conky-all pv ncdu vnstat'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
 IMAGE='pinta inkspace shutter'
@@ -24,10 +25,12 @@ ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,curso
 VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme'
 FIREFOX_PLUGINS='Firefox Plugins: uBlock decentraleyes privacy-settings self-destructing-cookies noscript canvas-blocker tab-toggle toolkit-for-ynab multiple-tab-handler pocket bitwarden flagfox text-contrast-for-dark-themes ubuntu-modifications'
 
+# Color code script output to easily view progress
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+# INSTALL PACKAGES
 
 add_ppas () {
     for i in "$@"; do
@@ -68,6 +71,9 @@ install_packages $ESSENTIAL
 echo -e "${RED}Installing Programming packages...${NC}"
 install_packages $PROGRAMMING
 
+echo -e "${RED}Installing Shell packages...${NC}"
+install_packages $SHELL
+
 echo -e "${RED}Installing System Info packages...${NC}"
 install_packages $SYS_INFO
 
@@ -99,3 +105,18 @@ echo -e "\n${RED}Upgrading...\n${NC}"
 sudo apt-get -y upgrade
 
 echo -e "\n${RED}Fresh install completed. You may need to restart now.${NC}"
+
+# INSTALL OH MY ZSH PLUGINS/THEMES
+
+# Directories
+OH_MY_ZSH_PLUGINS_DIR='~/.oh-my-zsh/custom/plugins'
+
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install Plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions $OH_MY_ZSH_PLUGINS_DIR
+git clone https://github.com/zsh-users/zsh-syntax-highlighting $OH_MY_ZSH_PLUGINS_DIR
+
+# Install Theme
+npm install --global pure-prompt

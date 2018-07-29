@@ -50,6 +50,7 @@ alias ci='git commit --interactive'
 alias pom='git push origin master'
 
 alias distro='cat /etc/issue'
+alias shebang='echo "#!/usr/bin/env bash"'
 
 export HISTCONTROL=ignoreboth:erasedups
 
