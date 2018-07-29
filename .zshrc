@@ -160,4 +160,3 @@ alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 # Pure Theme Config
 autoload -U promptinit; promptinit
 prompt pure
-

@@ -110,6 +110,7 @@ echo -e "\n${RED}Fresh install completed. You may need to restart now.${NC}"
 
 # Directories
 OH_MY_ZSH_PLUGINS_DIR='~/.oh-my-zsh/custom/plugins'
+OH_MY_ZSH_THEMES_DIR='~/.oh-my-zsh/custom/themes/'
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -118,5 +119,9 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 git clone https://github.com/zsh-users/zsh-autosuggestions $OH_MY_ZSH_PLUGINS_DIR
 git clone https://github.com/zsh-users/zsh-syntax-highlighting $OH_MY_ZSH_PLUGINS_DIR
 
-# Install Theme
+# Install Themes
+git clone https://github.com/bhilburn/powerlevel9k.git $OH_MY_ZSH_THEMES_DIR/powerlevel9k
 npm install --global pure-prompt
+
+# Refresh Changes
+source ~/.zshrc
