@@ -7,7 +7,7 @@ PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
 # Install using a Debian-based package manager
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
 ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux'
-PROGRAMMING='nodejs npm python-pip python3-pip clang httpie'
+PROGRAMMING='nodejs npm python-pip python-dev python3-pip clang httpie'
 SHELL='zsh fonts-powerline'
 SYS_INFO='htop screenfetch conky-all pv ncdu vnstat'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
@@ -17,10 +17,10 @@ STEM='speedcrunch pi'
 FUN='cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate rig xcowsay'
 
 # Install using pip (Python Package Index)
-#PIP_PACKAGES=''
+PIP_PACKAGES='platformio glances'
 
 # Install using another method (check the website)
-OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat'
+OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat krita'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
 VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme'
 FIREFOX_PLUGINS='Firefox Plugins: uBlock decentraleyes privacy-settings self-destructing-cookies noscript canvas-blocker tab-toggle toolkit-for-ynab multiple-tab-handler pocket bitwarden flagfox text-contrast-for-dark-themes ubuntu-modifications'
@@ -93,7 +93,7 @@ echo -e "${RED}Installing Fun packages...${NC}"
 install_packages $FUN
 
 echo -e "${RED}Installing pip packages...${NC}"
-sudo pip install -U platformio
+sudo pip install -U $PIP_PACKAGES
 
 echo -e "${RED}Don't forget to install...\n${NC}"
 echo -e "${GREEN}${OTHER_PACKAGES}${NC}"
@@ -125,3 +125,4 @@ npm install --global pure-prompt
 
 # Refresh Changes
 source ~/.zshrc
+
