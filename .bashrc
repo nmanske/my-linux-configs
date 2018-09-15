@@ -52,7 +52,8 @@ alias pom='git push origin master'
 alias distro='cat /etc/issue'
 alias shebang='echo "#!/usr/bin/env bash"'
 
-export HISTCONTROL=ignoreboth:erasedups
+export HISTCONTROL=ignoredups
+export HISTSIZE=1000000
 
 # Laptop Configurations
 
