@@ -22,7 +22,8 @@ PIP_PACKAGES='platformio glances'
 # Install using another method (check the website)
 OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat krita'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
-VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme'
+VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme dash dotENV excel-viewer html-snippets partial-diff rainbow-csv spell-right'
+CHROME_ADDONS='Chrome Addons: uBlock https-everywhere fontface-ninja dimensions color-palette decentraleyes privacy-badger'
 FIREFOX_PLUGINS='Firefox Plugins: uBlock decentraleyes privacy-settings self-destructing-cookies noscript canvas-blocker tab-toggle toolkit-for-ynab multiple-tab-handler pocket bitwarden flagfox text-contrast-for-dark-themes ubuntu-modifications'
 
 # Color code script output to easily view progress
