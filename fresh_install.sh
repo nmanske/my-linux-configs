@@ -22,7 +22,7 @@ PIP_PACKAGES='platformio glances'
 # Install using another method (check the website)
 OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat krita bat prettyping fzf diff-so-fancy fd ncdu ack ag jq entr'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
-VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme dash dotENV excel-viewer html-snippets partial-diff rainbow-csv spell-right'
+VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme dash dotENV excel-viewer html-snippets partial-diff rainbow-csv spell-right github-pull-requests vs-live-share quokka.js version-lens multi-command bracket-pair-colorizer color-info emojisense gitlens markdown-all-in-one editorconfig bookmarks path-intellisense cdnjs polacode prettier rest-client code-runner vscode-spotify indent-rainbow better-comments vscode-icons project-manager js-es6-code-snippets import-cost auto-rename-tag auto-close-tag git-history indenticator multiple-clipboards'
 CHROME_ADDONS='Chrome Addons: uBlock https-everywhere fontface-ninja dimensions color-palette decentraleyes privacy-badger'
 FIREFOX_PLUGINS='Firefox Plugins: uBlock decentraleyes privacy-settings self-destructing-cookies noscript canvas-blocker tab-toggle toolkit-for-ynab multiple-tab-handler pocket bitwarden flagfox text-contrast-for-dark-themes ubuntu-modifications'
 
