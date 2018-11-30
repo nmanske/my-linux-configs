@@ -2,11 +2,11 @@
 # Install useful packages on Debian-based systems without thinking too hard
 
 
-PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp'
+PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp alexlarsson/flatpak'
 
 # Install using a Debian-based package manager
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
-ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux'
+ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux flatpak'
 PROGRAMMING='nodejs npm python-pip python-dev python3-pip clang httpie'
 SHELL='zsh fonts-powerline'
 SYS_INFO='htop screenfetch conky-all pv ncdu vnstat'
@@ -20,11 +20,11 @@ FUN='cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate ri
 PIP_PACKAGES='platformio glances'
 
 # Install using another method (check the website)
-OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat krita bat prettyping fzf diff-so-fancy fd ncdu ack ag jq entr fonts-firacode'
+OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia bash-snippets tldr vtop neofetch lolcat krita prettyping fzf diff-so-fancy fd ncdu ack ag jq entr fonts-firacode bat'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
 VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme dash dotENV excel-viewer html-snippets partial-diff rainbow-csv spell-right github-pull-requests vs-live-share quokka.js version-lens multi-command bracket-pair-colorizer color-info emojisense gitlens markdown-all-in-one editorconfig bookmarks path-intellisense cdnjs polacode prettier rest-client code-runner vscode-spotify indent-rainbow better-comments vscode-icons project-manager js-es6-code-snippets import-cost auto-rename-tag auto-close-tag git-history indenticator multiple-clipboards eslint'
-CHROME_EXTENSIONS='Chrome Extensions: uBlock https-everywhere decentraleyes privacy-badger neat-url momentum toolkit-for-ynab'
-FIREFOX_ADDONS='Firefox Add-ons: uBlock decentraleyes privacy-settings self-destructing-cookies cookie-autodelete noscript canvas-blocker tab-toggle toolkit-for-ynab multiple-tab-handler pocket bitwarden flagfox text-contrast-for-dark-themes ubuntu-modifications google-search-link-fix privacy-badger https-everywhere zoom-page-we scroll-anywhere momentum'
+CHROME_EXTENSIONS='Chrome Extensions: uBlock https-everywhere decentraleyes privacy-badger neat-url toolkit-for-ynab'
+FIREFOX_ADDONS='Firefox Add-ons: uBlock decentraleyes privacy-settings self-destructing-cookies cookie-autodelete noscript canvas-blocker tab-toggle toolkit-for-ynab multiple-tab-handler pocket bitwarden flagfox text-contrast-for-dark-themes ubuntu-modifications google-search-link-fix privacy-badger https-everywhere zoom-page-we scroll-anywhere'
 CHROME_DEVELOPER_EXTENSIONS='Chrome Developer Extensions: fontface-ninja dimensions color-palette web-developer colorpick-eyedropper ripple-emulator wappalyzer check-my-links web-timer click-and-clean lorem-ipsum-generator neat-url'
 FIREFOX_DEVELOPER_ADDONS='Firefox Developer Add-ons: web-developer user-agent-switcher usersnap colorzilla nuke-anything-enhanced cookie-manager bloody-vikings'
 
@@ -102,7 +102,10 @@ echo -e "${RED}Don't forget to install...\n${NC}"
 echo -e "${GREEN}${OTHER_PACKAGES}${NC}"
 echo -e "${GREEN}${ATOM_PACKAGES}${NC}"
 echo -e "${GREEN}${VSCODE_PACKAGES}${NC}"
-echo -e "${GREEN}${FIREFOX_PLUGINS}${NC}"
+echo -e "${GREEN}${CHROME_EXTENSIONS}${NC}"
+echo -e "${GREEN}${FIREFOX_ADDONS}${NC}"
+echo -e "${GREEN}${CHROME_DEVELOPER_EXTENSIONS}${NC}"
+echo -e "${GREEN}${FIREFOX_DEVELOPER_ADDONS}${NC}"
 
 echo -e "\n${RED}Upgrading...\n${NC}"
 sudo apt-get -y upgrade
