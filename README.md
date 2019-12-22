@@ -19,7 +19,7 @@ The directory structure of this repository does not specify the absolute paths o
 * OS: Peppermint 8
 * CPU: Intel Core2 Duo CPU P8600 @ 2.4GHz
 * Motherboard: N/A
-* Memory: 4GB
-* Storage: 144GB HDD
+* Memory: 8GB
+* Storage: 128GB SDD
 * Graphics: Intel GM45 Express Chipset
 
