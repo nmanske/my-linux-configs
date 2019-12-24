@@ -10,7 +10,7 @@ export TERM="xterm-256color"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -106,7 +106,15 @@ source $ZSH/oh-my-zsh.sh
 
 # USER DEFINED CONFIGURATIONS
 
+# Pure Theme Config
+# autoload -U promptinit; promptinit
+# prompt pure
+
 alias vi='vim'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 alias documents='cd ~/Documents'
 alias downloads='cd ~/Downloads'
@@ -154,12 +162,14 @@ alias pom='git push origin master'
 alias distro='cat /etc/issue'
 alias shebang='echo "#!/usr/bin/env bash"'
 
-export HISTCONTROL=ignoreboth:erasedups
+alias setcaps="setxkbmap -option ctrl:nocaps && xcape -e 'Control_L=Escape'"
 
 # Laptop Configurations
 
 alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 
-# Pure Theme Config
-# autoload -U promptinit; promptinit
-# prompt pure
+# Exports
+
+export HISTCONTROL=ignoredups
+export HISTSIZE=100000
+
