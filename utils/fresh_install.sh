@@ -1,29 +1,32 @@
 #!/usr/bin/env bash
 # Install useful packages on Debian-based systems without thinking too hard
+# Pass "laptop" as first arg to install power related packages
+
+# Color defs to view installation progress
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+# INSTALL PACKAGES
 
 PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp alexlarsson/flatpak'
 
-# Install using a Debian-based package manager
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
 ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux flatpak caffeine'
-PROGRAMMING='nodejs npm python-pip python-dev python3-pip clang httpie'
+PROGRAMMING='nodejs npm python-pip python-dev python3-pip clang httpie neovim'
 SHELL='zsh fonts-powerline'
 SYS_INFO='htop screenfetch conky-all pv ncdu vnstat'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
+WM='i3 i3-wm dunst i3lock i3status suckless-tools compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior'	
 IMAGE='pinta inkspace shutter'
 STEM='speedcrunch pi'
 FUN='cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate rig xcowsay'
-WM='i3 	i3-wm dunst i3lock i3status suckless-tools compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior'	
 LAPTOP='tlp tlp-rdw powertop geany geany-plugins'
 
 # Install using pip (Python Package Index)
 PIP_PACKAGES='platformio glances'
 
 # Install using another method (check the website)
-
-SCREEN_THESE='Check these out: copyq zplug tilix zsh-completions yadm fasd lf pandoc pwgen trash-cli lnav opn-cli asciinema fkill doctoc speedtest-cli get-port-cli public-ip-cli internal-ip-cli pet-snippet-manager caniuse-cmd how2-stackoverflow hub conventional-changelog release-it jq tig pageres-cli yeoman license gi/gitignore.io mycli json-server localtunnel devdocs-desktop artillery automate-with-ansible corebird ramme caprine'
-
-OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia boostnote mailspring xnconvert peek-screen-recorder trimage ff-multi-converter pick-colour-picker bash-snippets tldr vtop neofetch lolcat krita prettyping fzf diff-so-fancy fd ncdu ack ag jq entr fonts-firacode bat exa'
 
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
 VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme dash dotENV excel-viewer html-snippets partial-diff rainbow-csv spell-right github-pull-requests vs-live-share quokka.js version-lens multi-command bracket-pair-colorizer color-info emojisense gitlens markdown-all-in-one editorconfig bookmarks path-intellisense cdnjs polacode prettier rest-client code-runner vscode-spotify indent-rainbow better-comments vscode-icons project-manager js-es6-code-snippets import-cost auto-rename-tag auto-close-tag git-history indenticator multiple-clipboards eslint'
@@ -34,12 +37,9 @@ FIREFOX_ADDONS='Firefox Add-ons: uBlock decentraleyes privacy-settings self-dest
 CHROME_DEVELOPER_EXTENSIONS='Chrome Developer Extensions: fontface-ninja dimensions color-palette web-developer colorpick-eyedropper ripple-emulator wappalyzer check-my-links web-timer click-and-clean lorem-ipsum-generator neat-url'
 FIREFOX_DEVELOPER_ADDONS='Firefox Developer Add-ons: web-developer user-agent-switcher usersnap colorzilla nuke-anything-enhanced cookie-manager bloody-vikings'
 
-# Color code script output to easily view progress
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-NC='\033[0m'
+OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia boostnote mailspring xnconvert peek-screen-recorder trimage ff-multi-converter pick-colour-picker bash-snippets tldr vtop neofetch lolcat krita prettyping fzf diff-so-fancy fd ncdu ack ag jq entr fonts-firacode bat exa imagemagick'
 
-# INSTALL PACKAGES
+SCREEN_THESE='Check these out: copyq zplug tilix zsh-completions yadm fasd lf pandoc pwgen trash-cli lnav opn-cli asciinema fkill doctoc speedtest-cli get-port-cli public-ip-cli internal-ip-cli pet-snippet-manager caniuse-cmd how2-stackoverflow hub conventional-changelog release-it jq tig pageres-cli yeoman license gi/gitignore.io mycli json-server localtunnel devdocs-desktop artillery automate-with-ansible corebird ramme caprine'
 
 add_ppas () {
     for i in "$@"; do
@@ -86,20 +86,25 @@ install_packages $SHELL
 echo -e "${RED}Installing System Info packages...${NC}"
 install_packages $SYS_INFO
 
+echo -e "${RED}Installing Window Management packages...${NC}"
+install_packages $WM
+
 echo -e "${RED}Installing Display packages...${NC}"
 install_packages $DISPLAY
 
 echo -e "${RED}Installing Image packages...${NC}"
 install_packages $IMAGE
 
-echo -e "${RED}Installing Battery packages...${NC}"
-install_packages $BATTERY
-
 echo -e "${RED}Installing STEM packages...${NC}"
 install_packages $STEM
 
 echo -e "${RED}Installing Fun packages...${NC}"
 install_packages $FUN
+
+if [[ $1 == "laptop" ]]; then
+    echo -e "${RED}Installing Laptop packages...${NC}"
+    install_packages $LAPTOP
+fi
 
 echo -e "${RED}Installing pip packages...${NC}"
 sudo pip install -U $PIP_PACKAGES
@@ -118,7 +123,14 @@ sudo apt-get -y upgrade
 
 echo -e "\n${RED}Fresh install completed. You may need to restart now.${NC}"
 
-# INSTALL OH MY ZSH PLUGINS/THEMES
+# INSTALL COMPILERS
+
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# TODO: Install Golang?
+
+# INSTALL OH-MY-ZSH PLUGINS/THEMES
 
 # Directories
 OH_MY_ZSH_PLUGINS_DIR='~/.oh-my-zsh/custom/plugins'
