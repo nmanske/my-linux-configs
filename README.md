@@ -1,7 +1,5 @@
 # my-linux-configs 
-Configurations and scripts that I created or adapted for use in my Linux systems. This repository will make it easier for me to synchronize my setup and to share them with anyone who might be interested.
-
-The directory structure of this repository does not specify the absolute paths of the files. Since the configuration process may very wildly between different distros any caveats are noted in the comments or elsewhere. Shared files between systems will go in the root directory of this repository.
+Configurations and scripts that I created or adapted for use in my Linux systems. This repository will make it easier for me to synchronize my setup and to share them with anyone who might be interested. The root directory of the repository represents the home (~) directory of the system.
 
 ### Systems
 

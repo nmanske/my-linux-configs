@@ -1,3 +1,5 @@
+### ZSH CONFIG ###
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -75,7 +77,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# -------------------------------------------------------------
+
+### USER CONFIG ###
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -141,8 +145,8 @@ alias df='df -h'
 alias du='du -h'
 alias free='free -h'
 
-alias suspend='pm-suspend'
-alias hibernate='pm-hibernate'
+alias suspend='systemctl suspend'
+alias hibernate='systemctl hibernate'
 alias shutdown='shutdown -h now'
 
 alias open='gnome-open'
