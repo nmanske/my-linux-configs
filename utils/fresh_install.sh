@@ -2,7 +2,7 @@
 # Install useful packages on Debian-based systems without thinking too hard
 # Pass "laptop" as first arg to install power related packages
 
-# Color defs to view installation progress
+# Colors for terminal output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
@@ -130,11 +130,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # TODO: Install Golang?
 
-# INSTALL OH-MY-ZSH PLUGINS/THEMES
+# INSTALL BASH/ZSH RESOURCES
 
 # Directories
 OH_MY_ZSH_PLUGINS_DIR='~/.oh-my-zsh/custom/plugins'
-OH_MY_ZSH_THEMES_DIR='~/.oh-my-zsh/custom/themes/'
+OH_MY_ZSH_THEMES_DIR='~/.oh-my-zsh/custom/themes'
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -144,9 +144,16 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $OH_MY_ZSH_PLUGINS_DI
 git clone https://github.com/zsh-users/zsh-syntax-highlighting $OH_MY_ZSH_PLUGINS_DIR
 
 # Install Themes
-git clone https://github.com/bhilburn/powerlevel9k.git $OH_MY_ZSH_THEMES_DIR/powerlevel9k
-npm install --global pure-prompt
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# Backup old RC files
+sudo cp ~/.bashrc ~/.bashrc_fresh-install-backup
+sudo cp ~/.zshrc ~/.zshrc_fresh-install-backup
+
+# Copy new RC files
+sudo cp ../.bashrc ~/.bashrc
+sudo cp ../.zshrc ~/.zshrc
 
 # Refresh Changes
+source ~/.bashrc
 source ~/.zshrc
-
