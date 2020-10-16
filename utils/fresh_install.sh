@@ -9,7 +9,7 @@ NC='\033[0m'
 
 # INSTALL PACKAGES
 
-PPAS='pinta-maintainers/pinta-stable shutter/ppa linrunner/tlp alexlarsson/flatpak'
+PPAS='pinta-maintainers/pinta-stable linrunner/tlp alexlarsson/flatpak'
 
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
 ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux flatpak caffeine'
@@ -18,7 +18,7 @@ SHELL='zsh fonts-powerline'
 SYS_INFO='htop screenfetch conky-all pv ncdu vnstat'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
 WM='i3 i3-wm dunst i3lock i3status suckless-tools compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior'	
-IMAGE='pinta inkspace shutter'
+IMAGE='pinta inkspace flameshot'
 STEM='speedcrunch pi'
 FUN='cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate rig xcowsay'
 LAPTOP='tlp tlp-rdw powertop geany geany-plugins'
