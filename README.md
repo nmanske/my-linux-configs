@@ -9,7 +9,7 @@ Configurations and scripts that I created or adapted for use in my Linux systems
 * CPU: AMD Ryzen 5 3600 (12) @ 3.632GH
 * Motherboard: MSI B450 Tomahawk Max
 * Memory: Corsair Vengeance RGB Pro 16GB (2x8B) DDR4-3600
-* Storage: 500GB SSD
+* Storage: Crucial MX500 500GB SATA 2.5" Internal SSD 
 * Video Card: Sapphire Radeon Pulse RX 5700 XT 8GB GDDR6
 * Case: Corsair 760T Full-Tower
 * Power Supply: EVGA SuperNOVA 850W G2
@@ -21,3 +21,4 @@ Configurations and scripts that I created or adapted for use in my Linux systems
 * Memory: 8GB
 * Storage: 128GB SDD
 * Graphics: Intel GM45 Express Chipset
+

@@ -20,7 +20,9 @@ DISPLAY='redshift redshift-gtk compton xscreensaver'
 WM='i3 i3-wm dunst i3lock i3status suckless-tools compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior'	
 IMAGE='pinta inkspace flameshot'
 STEM='speedcrunch pi'
-FUN='cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate rig xcowsay'
+# TODO: Add gaming section for jstest-gtk and antimicro
+# https://www.maketecheasier.com/set-up-xbox-one-controller-ubuntu/
+FUN='jstest-gtk cowsay fortune cmatrix sl hollywood tty-clock toilet oneko nyancat ddate rig xcowsay'
 LAPTOP='tlp tlp-rdw powertop geany geany-plugins'
 
 # Install using pip (Python Package Index)
@@ -31,8 +33,8 @@ PIP_PACKAGES='platformio glances'
 ATOM_PACKAGES='Atom Packages: platformio-ide-{debugger,terminal} minimap-{,cursorline,find-and-replace,highlight-selected} open-recent'
 VSCODE_PACKAGES='Visual Studio Code Packages: platformio-ide seti-icons settings-sync c-cpp-intellisense output-colorizer native-debug seti-monokai-theme dash dotENV excel-viewer html-snippets partial-diff rainbow-csv spell-right github-pull-requests vs-live-share quokka.js version-lens multi-command bracket-pair-colorizer color-info emojisense gitlens markdown-all-in-one editorconfig bookmarks path-intellisense cdnjs polacode prettier rest-client code-runner vscode-spotify indent-rainbow better-comments vscode-icons project-manager js-es6-code-snippets import-cost auto-rename-tag auto-close-tag git-history indenticator multiple-clipboards eslint'
 
-CHROME_EXTENSIONS='Chrome Extensions: uBlock https-everywhere decentraleyes privacy-badger neat-url toolkit-for-ynab make-medium-readable-again'
-FIREFOX_ADDONS='Firefox Add-ons: uBlock decentraleyes privacy-settings self-destructing-cookies cookie-autodelete noscript canvas-blocker tab-toggle toolkit-for-ynab multiple-tab-handler pocket bitwarden flagfox text-contrast-for-dark-themes ubuntu-modifications google-search-link-fix privacy-badger https-everywhere zoom-page-we scroll-anywhere make-medium-readable-again'
+CHROME_EXTENSIONS='Chrome Extensions: uBlock https-everywhere decentraleyes privacy-badger neat-url toolkit-for-ynab make-medium-readable-again github-dark-theme'
+FIREFOX_ADDONS='Firefox Add-ons: uBlock decentraleyes privacy-settings self-destructing-cookies cookie-autodelete noscript canvas-blocker tab-toggle toolkit-for-ynab multiple-tab-handler pocket bitwarden flagfox text-contrast-for-dark-themes ubuntu-modifications google-search-link-fix privacy-badger https-everywhere zoom-page-we scroll-anywhere make-medium-readable-again github-dark-theme'
 
 CHROME_DEVELOPER_EXTENSIONS='Chrome Developer Extensions: fontface-ninja dimensions color-palette web-developer colorpick-eyedropper ripple-emulator wappalyzer check-my-links web-timer click-and-clean lorem-ipsum-generator neat-url'
 FIREFOX_DEVELOPER_ADDONS='Firefox Developer Add-ons: web-developer user-agent-switcher usersnap colorzilla nuke-anything-enhanced cookie-manager bloody-vikings'
