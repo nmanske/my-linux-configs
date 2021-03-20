@@ -12,10 +12,10 @@ NC='\033[0m'
 PPAS='pinta-maintainers/pinta-stable linrunner/tlp alexlarsson/flatpak'
 
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
-ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux flatpak caffeine'
+ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux flatpak bat caffeine font-manager gnome-tweak-tool'
 PROGRAMMING='nodejs npm python-pip python-dev python3-pip clang httpie neovim'
 SHELL='zsh fonts-powerline'
-SYS_INFO='htop screenfetch conky-all pv ncdu vnstat'
+SYS_INFO='htop neofetch conky-all pv ncdu vnstat'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
 WM='i3 i3-wm dunst i3lock i3status suckless-tools compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior'	
 IMAGE='pinta inkspace flameshot'
@@ -39,9 +39,12 @@ FIREFOX_ADDONS='Firefox Add-ons: uBlock decentraleyes privacy-settings self-dest
 CHROME_DEVELOPER_EXTENSIONS='Chrome Developer Extensions: fontface-ninja dimensions color-palette web-developer colorpick-eyedropper ripple-emulator wappalyzer check-my-links web-timer click-and-clean lorem-ipsum-generator neat-url'
 FIREFOX_DEVELOPER_ADDONS='Firefox Developer Add-ons: web-developer user-agent-switcher usersnap colorzilla nuke-anything-enhanced cookie-manager bloody-vikings'
 
-OTHER_PACKAGES='Other Packages: amdgpu-pro atom libreoffice gimp pia boostnote mailspring xnconvert peek-screen-recorder trimage ff-multi-converter pick-colour-picker bash-snippets tldr vtop neofetch lolcat krita prettyping fzf diff-so-fancy fd ncdu ack ag jq entr fonts-firacode bat exa imagemagick'
+OTHER_PACKAGES='Other Packages: dropbox libreoffice gimp pia boostnote mailspring xnconvert peek-screen-recorder trimage ff-multi-converter pick-colour-picker bash-snippets tldr vtop lolcat krita prettyping fzf diff-so-fancy fd ncdu ack ag jq entr fonts-firacode exa imagemagick'
 
 SCREEN_THESE='Check these out: copyq zplug tilix zsh-completions yadm fasd lf pandoc pwgen trash-cli lnav opn-cli asciinema fkill doctoc speedtest-cli get-port-cli public-ip-cli internal-ip-cli pet-snippet-manager caniuse-cmd how2-stackoverflow hub conventional-changelog release-it jq tig pageres-cli yeoman license gi/gitignore.io mycli json-server localtunnel devdocs-desktop artillery automate-with-ansible corebird ramme caprine'
+
+# TODO: Add flag to conditionally install or display this and gnome-tweaks and other gnome-specific packages 
+GNOME_EXTENSIONS=''
 
 add_ppas () {
     for i in "$@"; do
