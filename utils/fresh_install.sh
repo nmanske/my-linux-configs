@@ -15,7 +15,7 @@ DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
 ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux flatpak bat caffeine font-manager gnome-tweak-tool'
 PROGRAMMING='nodejs npm python-pip python-dev python3-pip clang httpie neovim'
 SHELL='zsh fonts-powerline'
-SYS_INFO='htop neofetch conky-all pv ncdu vnstat'
+SYS_INFO='htop neofetch conky-all pv ncdu vnstat stacer QDirStat'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
 WM='i3 i3-wm dunst i3lock i3status suckless-tools compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior'	
 IMAGE='pinta inkspace flameshot'
@@ -39,12 +39,13 @@ FIREFOX_ADDONS='Firefox Add-ons: uBlock decentraleyes privacy-settings self-dest
 CHROME_DEVELOPER_EXTENSIONS='Chrome Developer Extensions: fontface-ninja dimensions color-palette web-developer colorpick-eyedropper ripple-emulator wappalyzer check-my-links web-timer click-and-clean lorem-ipsum-generator neat-url'
 FIREFOX_DEVELOPER_ADDONS='Firefox Developer Add-ons: web-developer user-agent-switcher usersnap colorzilla nuke-anything-enhanced cookie-manager bloody-vikings'
 
-OTHER_PACKAGES='Other Packages: dropbox libreoffice gimp pia boostnote mailspring xnconvert peek-screen-recorder trimage ff-multi-converter pick-colour-picker bash-snippets tldr vtop lolcat krita prettyping fzf diff-so-fancy fd ncdu ack ag jq entr fonts-firacode exa imagemagick'
+OTHER_PACKAGES='Other Packages: cadmus timeshift alacritty dropbox libreoffice gimp pia boostnote mailspring xnconvert peek-screen-recorder trimage ff-multi-converter pick-colour-picker bash-snippets tldr vtop lolcat krita prettyping fzf diff-so-fancy fd ncdu ack ag jq entr fonts-firacode exa imagemagick OpenRGB'
 
-SCREEN_THESE='Check these out: copyq zplug tilix zsh-completions yadm fasd lf pandoc pwgen trash-cli lnav opn-cli asciinema fkill doctoc speedtest-cli get-port-cli public-ip-cli internal-ip-cli pet-snippet-manager caniuse-cmd how2-stackoverflow hub conventional-changelog release-it jq tig pageres-cli yeoman license gi/gitignore.io mycli json-server localtunnel devdocs-desktop artillery automate-with-ansible corebird ramme caprine'
+SCREEN_THESE='Check these out: spicetify-themes spicetify-cli copyq zplug tilix zsh-completions yadm fasd lf pandoc pwgen trash-cli lnav opn-cli asciinema fkill doctoc speedtest-cli get-port-cli public-ip-cli internal-ip-cli pet-snippet-manager caniuse-cmd how2-stackoverflow hub conventional-changelog release-it jq tig pageres-cli yeoman license gi/gitignore.io mycli json-server localtunnel devdocs-desktop artillery automate-with-ansible corebird ramme caprine'
 
 # TODO: Add flag to conditionally install or display this and gnome-tweaks and other gnome-specific packages 
-GNOME_EXTENSIONS=''
+GNOME_EXTENSIONS='dash-to-dock caffeine openweather middle-click-to-close-in-overview sound-output-device-chooser tray-icons-reloaded'
+GNOME_PACKAGES='dconf-editor'
 
 add_ppas () {
     for i in "$@"; do
@@ -162,3 +163,6 @@ sudo cp ../.zshrc ~/.zshrc
 # Refresh Changes
 source ~/.bashrc
 source ~/.zshrc
+
+## Inspo
+### https://old.reddit.com/r/pop_os/comments/lqiw6b/pop_os_essentials/

@@ -172,6 +172,11 @@ alias setcaps="setxkbmap -option ctrl:nocaps && xcape -e 'Control_L=Escape'"
 
 alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 
+# Desktop Configurations
+
+alias knowledge='cd ~/Dropbox/Notes/Knowledge'
+alias update-knowledge='cd ~/Dropbox/Notes/Knowledge && git add . && git commit -m "Update notes" && git push origin master'
+
 # Exports
 
 export HISTCONTROL=ignoredups
