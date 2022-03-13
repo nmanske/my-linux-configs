@@ -9,13 +9,13 @@ NC='\033[0m'
 
 # INSTALL PACKAGES
 
-PPAS='pinta-maintainers/pinta-stable linrunner/tlp alexlarsson/flatpak'
+PPAS='ppa:ernstp/mesarc ppa:flexiondotorg/mangohud alexlarsson/flatpak linrunner/tlp'
 
 DEPENDENCIES='git gcc make pkg-config libx11-dev libxtst-dev libxi-dev'
-ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux flatpak bat caffeine font-manager gnome-tweak-tool'
+ESSENTIAL='chromium-browser terminator vim tree xcape pass curl ranger xclip autojump tmux flatpak bat caffeine font-manager gnome-tweaks gnome-tweak-tool corectrl gamemode'
 PROGRAMMING='nodejs npm python-pip python-dev python3-pip clang httpie neovim'
 SHELL='zsh fonts-powerline'
-SYS_INFO='htop neofetch conky-all pv ncdu vnstat stacer QDirStat'
+SYS_INFO='htop neofetch conky-all pv ncdu vnstat stacer QDirStat mangohud'
 DISPLAY='redshift redshift-gtk compton xscreensaver'
 WM='i3 i3-wm dunst i3lock i3status suckless-tools compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior'	
 IMAGE='pinta inkspace flameshot'
