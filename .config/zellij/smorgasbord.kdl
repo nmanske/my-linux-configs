@@ -1,0 +1,19 @@
+layout {
+    tab name="SSH Sessions" {
+        pane split_direction="vertical" {
+            pane split_direction="horizontal" {
+                pane {
+                    command "ssh"
+                    args "nathan@funnelcake"
+                }
+                pane {
+                    command "ssh"
+                    args "nathan@bentobox"
+                }
+            }
+            pane {
+
+            }
+        }
+    }
+}
